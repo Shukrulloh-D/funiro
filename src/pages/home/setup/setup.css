@@ -1,0 +1,104 @@
+.setup {
+  padding: 40px 0 72px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.setup__label {
+  font-size: 20px;
+  font-weight: 500;
+  color: #666;
+}
+
+.setup__title {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+/* коллаж: размеры и места в процентах от ширины, как в Figma */
+.setup__grid {
+  position: relative;
+  aspect-ratio: 884 / 443;
+  margin-top: 32px;
+}
+
+.setup__grid img {
+  position: absolute;
+  object-fit: cover;
+}
+
+.setup__grid img:nth-child(1) {
+  left: 0;
+  top: 0;
+  width: 14.4%;
+  height: 53%;
+}
+.setup__grid img:nth-child(2) {
+  left: 15.3%;
+  top: 9.7%;
+  width: 31.3%;
+  height: 43.3%;
+}
+.setup__grid img:nth-child(3) {
+  left: 47.7%;
+  top: 21.7%;
+  width: 20.6%;
+  height: 54.4%;
+}
+.setup__grid img:nth-child(4) {
+  left: 69.3%;
+  top: 13.8%;
+  width: 20.2%;
+  height: 48.3%;
+}
+.setup__grid img:nth-child(5) {
+  left: 90.7%;
+  top: 2%;
+  width: 9.4%;
+  height: 60%;
+}
+.setup__grid img:nth-child(6) {
+  left: 0;
+  top: 55.3%;
+  width: 21.8%;
+  height: 44.7%;
+}
+.setup__grid img:nth-child(7) {
+  left: 22.7%;
+  top: 55.3%;
+  width: 23.9%;
+  height: 33.6%;
+}
+.setup__grid img:nth-child(8) {
+  left: 69.3%;
+  top: 64.3%;
+  width: 12.4%;
+  height: 33.6%;
+}
+.setup__grid img:nth-child(9) {
+  left: 82.9%;
+  top: 64.3%;
+  width: 17.2%;
+  height: 27.3%;
+}
+
+/* телефон: обычная сетка по 2 фото */
+@media (max-width: 639px) {
+  .setup__title {
+    font-size: 28px;
+  }
+
+  .setup__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    aspect-ratio: auto;
+    padding: 0 20px;
+  }
+
+  .setup__grid img {
+    position: static;
+    width: 100% !important;
+    height: 180px !important;
+  }
+}

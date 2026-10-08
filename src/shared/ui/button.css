@@ -1,0 +1,46 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  padding: 0 40px;
+  border: 1px solid var(--orange);
+  font-weight: 600;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+}
+
+.btn--lg {
+  height: 72px;
+  font-size: 18px;
+}
+
+.btn--orange {
+  background: var(--orange);
+  color: #fff;
+}
+
+.btn--orange:hover {
+  background: var(--orange-dark);
+}
+
+.btn--outline {
+  background: transparent;
+  color: var(--orange);
+}
+
+.btn--outline:hover {
+  background: var(--orange);
+  color: #fff;
+}
+
+.btn--white {
+  border-color: #fff;
+  background: #fff;
+  color: var(--orange);
+}
+
+.btn--white:hover {
+  background: var(--cream);
+}

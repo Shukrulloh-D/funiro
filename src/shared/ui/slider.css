@@ -1,0 +1,81 @@
+.slider {
+  position: relative;
+}
+
+.slider__track {
+  position: relative;
+  display: flex;
+  gap: 32px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.slider__track::-webkit-scrollbar {
+  display: none;
+}
+
+.slider__slide {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
+
+/* стрелки и точки: размер и цвет здесь, место - в CSS секции */
+.slider__arrow {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: 0;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-size: 28px;
+  line-height: 1;
+  color: var(--orange);
+}
+
+.slider__dots {
+  position: absolute;
+  display: flex;
+  gap: 18px;
+}
+
+.slider__dot {
+  position: relative;
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #d8d8d8;
+}
+
+.slider__dot.is-active {
+  background: var(--orange);
+}
+
+/* кольцо вокруг активной точки */
+.slider__dot.is-active::after {
+  content: '';
+  position: absolute;
+  inset: -5px;
+  border: 1px solid var(--orange);
+  border-radius: 50%;
+}
+
+/* планшет и телефон: стрелок нет (листаем пальцем), точки под слайдером */
+@media (max-width: 1023px) {
+  .slider__arrow {
+    display: none;
+  }
+
+  .slider__dots {
+    position: static;
+    justify-content: center;
+    margin-top: 20px;
+  }
+}

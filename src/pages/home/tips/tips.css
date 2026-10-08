@@ -1,0 +1,50 @@
+.tips {
+  padding: 56px 0 64px;
+}
+
+.tips__title {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.tips__slider {
+  margin-top: 32px;
+}
+
+.tips__slider .slider__track {
+  gap: 30px;
+  padding-bottom: 24px;
+}
+
+/* стрелки по бокам, точки по центру внизу */
+.tips__slider .slider__arrow {
+  top: 100px;
+}
+
+.tips__slider .slider__arrow--prev {
+  left: -24px;
+}
+
+.tips__slider .slider__arrow--next {
+  right: 0;
+}
+
+.tips__slider .slider__dots {
+  bottom: -32px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (max-width: 1023px) {
+  .tips__slider .slider__dots {
+    position: static;
+    transform: none;
+  }
+}
+
+@media (max-width: 639px) {
+  .tips__title {
+    font-size: 28px;
+  }
+}
