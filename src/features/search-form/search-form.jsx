@@ -1,11 +1,35 @@
+import { scrollToId } from '@/shared/lib/scroll'
+import { useSearch } from './search-context'
 import './search-form.css'
 
-// поиск. Пока без логики: форма отправляется как обычная
 export function SearchForm() {
+  const { query, setQuery } = useSearch()
+
+  // Enter: не перезагружаем страницу, а прокручиваем к товарам
+  function handleSubmit(e) {
+    e.preventDefault()
+    scrollToId('products')
+  }
+
   return (
-    <form className="search">
+    <form className="search" onSubmit={handleSubmit}>
       <img src="/images/search.svg" alt="" />
-      <input type="search" name="q" placeholder="Search for minimalist chair" />
+      <input
+        type="search"
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+        placeholder="Search for minimalist chair"
+      />
+      {query && (
+        <button
+          type="button"
+          className="search__clear"
+          aria-label="Clear"
+          onClick={() => setQuery('')}
+        >
+          ✕
+        </button>
+      )}
     </form>
   )
 }

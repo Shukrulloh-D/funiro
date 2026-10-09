@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { SearchForm } from '@/features/search-form/search-form'
 import './header.css'
 
 // sub = выпадающий список на компьютере
@@ -15,21 +14,21 @@ export function Header() {
 
   return (
     <header className="header">
-      <div className="header__bar">
+      <div className="header-bar">
         <a href="#top">
-          <img className="header__logo" src="/images/logo.svg" alt="Funiro" />
+          <img className="header-logo" src="/images/logo.svg" alt="Funiro" />
         </a>
 
-        <nav className={open ? 'nav nav--open' : 'nav'} onClick={() => setOpen(false)}>
-          <ul className="nav__list">
+        <nav className={open ? 'nav nav--open' : 'nav'}>
+          <ul className="nav-list" onClick={() => setOpen(false)}>
             {menu.map((item) => (
-              <li className="nav__item" key={item.name}>
+              <li className="nav-item" key={item.name}>
                 <a href={item.href}>
                   {item.name}
                   {item.sub && ' ⌵'}
                 </a>
                 {item.sub && (
-                  <ul className="nav__sub">
+                  <ul className="nav-sub">
                     {item.sub.map((name) => (
                       <li key={name}>
                         <a href={item.href}>{name}</a>
@@ -40,16 +39,17 @@ export function Header() {
               </li>
             ))}
           </ul>
-          {/* клик по поиску не закрывает меню */}
-          <div onClick={(e) => e.stopPropagation()}>
-            <SearchForm />
-          </div>
+          {/* поиск: обычная форма, логики пока нет */}
+          <form className="search">
+            <img src="/images/search.svg" alt="" />
+            <input type="search" name="q" placeholder="Search for minimalist chair" />
+          </form>
         </nav>
 
-        <div className="header__icons">
+        <div className="header-icons">
           <img src="/images/heart.svg" alt="Wishlist" />
           <img src="/images/cart.svg" alt="Cart" />
-          <img className="header__avatar" src="/images/avatar.png" alt="Profile" />
+          <img className="header-avatar" src="/images/avatar.png" alt="Profile" />
         </div>
 
         <button className="burger" aria-label="Menu" onClick={() => setOpen(!open)}>

@@ -1,5 +1,4 @@
 import { Slider } from '@/shared/ui/slider'
-import { TipCard } from '@/entities/tip/tip-card'
 import './tips.css'
 
 // TODO: 4-я карточка временная, заменить по Figma
@@ -30,7 +29,13 @@ export function Tips() {
 
         <Slider className="tips__slider">
           {tips.map((tip) => (
-            <TipCard key={tip.title} item={tip} />
+            <article className="tip-card" key={tip.title}>
+              <img className="tip-card__img" src={tip.image} alt="" />
+              <div className="tip-card__body">
+                <h3 className="tip-card__title">{tip.title}</h3>
+                <p className="tip-card__date">{tip.date}</p>
+              </div>
+            </article>
           ))}
         </Slider>
       </div>
