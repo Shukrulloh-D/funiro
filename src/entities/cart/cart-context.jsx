@@ -2,7 +2,7 @@ import { createContext, useContext, useEffect, useMemo, useReducer, useState } f
 
 const CartContext = createContext(null)
 
-// reducer: одна функция, которая описывает все изменения корзины
+
 function cartReducer(items, action) {
   switch (action.type) {
     case 'add': {
@@ -37,7 +37,6 @@ export function CartProvider({ children }) {
   const [items, dispatch] = useReducer(cartReducer, [], loadCart)
   const [open, setOpen] = useState(false) // открыта ли панель корзины
 
-  // сохраняем корзину при каждом изменении
   useEffect(() => {
     localStorage.setItem('funiro-cart', JSON.stringify(items))
   }, [items])
@@ -60,7 +59,6 @@ export function CartProvider({ children }) {
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>
 }
 
-// const cart = useCart() -> cart.items, cart.count, cart.total, cart.add(item) ...
 export function useCart() {
   return useContext(CartContext)
 }

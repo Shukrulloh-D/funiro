@@ -32,7 +32,10 @@ const products = [
     price: 'Rp 500.000',
     badge: 'New',
   },
-  { image: '/images/product-5.png', name: 'Grifo', text: 'Night lamp', price: 'Rp 1.500.000' },
+  { image: '/images/product-5.png',
+    name: 'Grifo',
+    text: 'Night lamp',
+    price: 'Rp 1.500.000' },
   {
     image: '/images/product-6.png',
     name: 'Muggo',
@@ -61,15 +64,15 @@ export function Products() {
   return (
     <section className="products" id="products">
       <div className="container">
-        <h2 className="products__title">Our Products</h2>
+        <h2 className="products-title">Our Products</h2>
 
-        <div className="products__grid">
+        <div className="products-grid">
           {products.map((item) => (
             <ProductCard key={item.name} item={item} />
           ))}
         </div>
 
-        <div className="products__more">
+        <div className="products-more">
           <Button color="outline">Show More</Button>
         </div>
       </div>

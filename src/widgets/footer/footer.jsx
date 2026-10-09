@@ -10,27 +10,27 @@ const columns = [
 export function Footer() {
   return (
     <footer className="footer">
-      <div className="container footer__inner">
-        <div className="footer__brand">
-          <img className="footer__logo" src="/images/logo.svg" alt="Funiro" />
-          <p className="footer__text">
+      <div className="container footer-inner">
+        <div className="footer-brand">
+          <img className="footer-logo" src="/images/logo.svg" alt="Funiro" />
+          <p className="footer-text">
             Worldwide furniture store since 2020. We sell over 1000+ branded products on our website
           </p>
-          <p className="footer__contact">
+          <p className="footer-contact">
             <img src="/images/location.svg" alt="" />
             Sawojajar Malang, Indonesia
           </p>
-          <p className="footer__contact">
+          <p className="footer-contact">
             <img src="/images/phone.svg" alt="" />
             +6289 456 3455
           </p>
-          <p className="footer__text">www.funiro.com</p>
+          <p className="footer-text">www.funiro.com</p>
         </div>
 
         {columns.map((column) => (
           <div key={column.title}>
-            <h3 className="footer__title">{column.title}</h3>
-            <ul className="footer__list">
+            <h3 className="footer-title">{column.title}</h3>
+            <ul className="footer-list">
               {column.links.map((link) => (
                 <li key={link}>{link}</li>
               ))}
@@ -39,7 +39,7 @@ export function Footer() {
         ))}
 
         <div>
-          <h3 className="footer__title">Stay Updated</h3>
+          <h3 className="footer-title">Stay Updated</h3>
           <SubscribeForm />
         </div>
       </div>

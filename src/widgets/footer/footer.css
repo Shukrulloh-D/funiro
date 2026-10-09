@@ -3,7 +3,7 @@
   background: #fff;
 }
 
-.footer__inner {
+.footer-inner {
   display: grid;
   grid-template-columns: 1.8fr 1fr 1fr 1.4fr 1.7fr;
   gap: 40px;
@@ -11,18 +11,18 @@
   border-top: 1px solid #d9d9d9;
 }
 
-.footer__logo {
+.footer-logo {
   height: 32px;
 }
 
-.footer__text {
+.footer-text {
   max-width: 260px;
   margin-top: 20px;
   font-size: 14px;
   color: #555;
 }
 
-.footer__contact {
+.footer-contact {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -31,38 +31,38 @@
   color: #555;
 }
 
-.footer__contact img {
+.footer-contact img {
   width: 18px;
   height: 18px;
 }
 
-.footer__title {
+.footer-title {
   margin-bottom: 28px;
   font-size: 20px;
   font-weight: 600;
 }
 
-.footer__list {
+.footer-list {
   display: grid;
   gap: 18px;
   font-size: 14px;
   color: #555;
 }
 
-.footer__list li {
+.footer-list li {
   cursor: pointer;
 }
 
-.footer__list li:hover {
+.footer-list li:hover {
   color: var(--orange);
 }
 
 @media (max-width: 1023px) {
-  .footer__inner {
+  .footer-inner {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .footer__brand {
+  .footer-brand {
     grid-column: 1 / -1;
   }
 }
@@ -72,14 +72,14 @@
     padding-bottom: 48px;
   }
 
-  .footer__inner {
+  .footer-inner {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 /* форма подписки на всю ширину в нижнем ряду */
 @media (max-width: 1023px) {
-  .footer__inner > :last-child {
+  .footer-inner > :last-child {
     grid-column: 1 / -1;
   }
 }

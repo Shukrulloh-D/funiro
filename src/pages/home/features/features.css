@@ -2,7 +2,7 @@
   padding: 72px 0 24px;
 }
 
-.features__list {
+.features-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
@@ -14,17 +14,17 @@
   gap: 12px;
 }
 
-.feature__icon {
+.feature-icon {
   width: 40px;
   height: 40px;
 }
 
-.feature__title {
+.feature-title {
   font-size: 16px;
   font-weight: 500;
 }
 
-.feature__text {
+.feature-text {
   font-size: 14px;
   color: var(--grey);
 }
@@ -34,14 +34,14 @@
     padding-top: 48px;
   }
 
-  .features__list {
+  .features-list {
     grid-template-columns: repeat(2, 1fr);
     gap: 28px;
   }
 }
 
 @media (max-width: 479px) {
-  .features__list {
+  .features-list {
     grid-template-columns: 1fr;
   }
 }

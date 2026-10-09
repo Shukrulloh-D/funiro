@@ -10,7 +10,7 @@
   visibility: visible;
 }
 
-.cart__overlay {
+.cart-overlay {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.4);
@@ -18,11 +18,11 @@
   transition: opacity 0.3s;
 }
 
-.cart--open .cart__overlay {
+.cart--open .cart-overlay {
   opacity: 1;
 }
 
-.cart__panel {
+.cart-panel {
   position: absolute;
   top: 0;
   right: 0;
@@ -36,11 +36,11 @@
   transition: transform 0.3s;
 }
 
-.cart--open .cart__panel {
+.cart--open .cart-panel {
   transform: none;
 }
 
-.cart__head {
+.cart-head {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -48,37 +48,37 @@
   border-bottom: 1px solid #d9d9d9;
 }
 
-.cart__head h2 {
+.cart-head h2 {
   font-size: 22px;
   font-weight: 600;
 }
 
-.cart__head button,
-.cart__remove {
+.cart-head button,
+.cart-remove {
   border: 0;
   background: transparent;
   font-size: 18px;
   color: var(--grey);
 }
 
-.cart__head button:hover,
-.cart__remove:hover {
+.cart-head button:hover,
+.cart-remove:hover {
   color: var(--dark);
 }
 
-.cart__empty {
+.cart-empty {
   flex: 1;
   margin: 48px 0;
   text-align: center;
   color: var(--grey);
 }
 
-.cart__list {
+.cart-list {
   flex: 1;
   overflow-y: auto;
 }
 
-.cart__item {
+.cart-item {
   display: flex;
   gap: 16px;
   align-items: center;
@@ -86,69 +86,69 @@
   border-bottom: 1px solid var(--light);
 }
 
-.cart__item img {
+.cart-item img {
   width: 80px;
   height: 80px;
   background: var(--light);
   object-fit: cover;
 }
 
-.cart__info {
+.cart-info {
   flex: 1;
 }
 
-.cart__info h3 {
+.cart-info h3 {
   font-size: 16px;
   font-weight: 600;
 }
 
-.cart__info p {
+.cart-info p {
   font-size: 14px;
   color: var(--grey);
 }
 
-.cart__qty {
+.cart-qty {
   display: flex;
   align-items: center;
   gap: 12px;
   margin-top: 8px;
 }
 
-.cart__qty button {
+.cart-qty button {
   width: 28px;
   height: 28px;
   border: 1px solid #d9d9d9;
   background: #fff;
 }
 
-.cart__qty button:hover {
+.cart-qty button:hover {
   border-color: var(--orange);
   color: var(--orange);
 }
 
-.cart__foot {
+.cart-foot {
   padding-top: 20px;
   border-top: 1px solid #d9d9d9;
 }
 
-.cart__foot p {
+.cart-foot p {
   display: flex;
   justify-content: space-between;
   margin-bottom: 16px;
   font-size: 18px;
 }
 
-.cart__buttons {
+.cart-buttons {
   display: flex;
   gap: 12px;
 }
 
-.cart__buttons .btn {
+.cart-buttons .btn {
   flex: 1;
   padding: 0 16px;
 }
 
-.cart__buttons .btn:disabled {
+.cart-buttons .btn:disabled {
   opacity: 0.4;
   cursor: default;
 }

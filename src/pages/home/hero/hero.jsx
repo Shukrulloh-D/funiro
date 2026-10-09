@@ -2,7 +2,6 @@ import { Button } from '@/shared/ui/button'
 import { Slider } from '@/shared/ui/slider'
 import './hero.css'
 
-// TODO: взять настоящие названия и цены из Figma для 2-4 слайдов
 const slides = [
   {
     image: '/images/hero-1.png',
@@ -18,21 +17,21 @@ const slides = [
 export function Hero() {
   return (
     <section className="hero" id="top">
-      <div className="hero__inner">
-        <div className="hero__card">
-          <h1 className="hero__title">High-Quality Furniture Just For You</h1>
-          <p className="hero__text">
+      <div className="hero-inner">
+        <div className="hero-card">
+          <h1 className="hero-title">High-Quality Furniture Just For You</h1>
+          <p className="hero-text">
             Our furniture is made from selected and best quality materials that are suitable for
             your dream home
           </p>
           <Button size="lg">Shop Now</Button>
         </div>
 
-        <Slider className="hero__slider">
+        <Slider className="hero-slider">
           {slides.map((slide) => (
             <div className="hero-slide" key={slide.name}>
-              <img className="hero-slide__img" src={slide.image} alt={slide.name} />
-              <div className="hero-slide__caption">
+              <img className="hero-slide-img" src={slide.image} alt={slide.name} />
+              <div className="hero-slide-caption">
                 <div>
                   <h2>{slide.name}</h2>
                   <p>{slide.text}</p>

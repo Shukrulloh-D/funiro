@@ -10,7 +10,6 @@
 
   --font: 'Poppins', system-ui, sans-serif;
   --header-h: 100px;
-  /* фон шапки и hero: слева чуть темнее */
   --hero-bg: linear-gradient(90deg, #fbf0e6 41.5%, var(--cream) 41.5%);
 }
 

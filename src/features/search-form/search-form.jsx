@@ -5,7 +5,6 @@ import './search-form.css'
 export function SearchForm() {
   const { query, setQuery } = useSearch()
 
-  // Enter: не перезагружаем страницу, а прокручиваем к товарам
   function handleSubmit(e) {
     e.preventDefault()
     scrollToId('products')
@@ -23,7 +22,7 @@ export function SearchForm() {
       {query && (
         <button
           type="button"
-          className="search__clear"
+          className="search-clear"
           aria-label="Clear"
           onClick={() => setQuery('')}
         >

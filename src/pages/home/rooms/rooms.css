@@ -4,7 +4,7 @@
   overflow: hidden;
 }
 
-.rooms__inner {
+.rooms-inner {
   display: grid;
   grid-template-columns: 400px 1fr;
   align-items: center;
@@ -14,45 +14,45 @@
   padding-left: 100px;
 }
 
-.rooms__title {
+.rooms-title {
   font-size: 40px;
   font-weight: 700;
   line-height: 1.2;
 }
 
-.rooms__text p {
+.rooms-text p {
   margin: 12px 0 28px;
   font-size: 16px;
   color: #666;
 }
 
-.rooms__slider {
+.rooms-slider {
   min-width: 0;
 }
 
-.rooms__slider .slider__track {
+.rooms-slider .slider-track {
   align-items: flex-start;
   gap: 24px;
 }
 
-/* активный слайд выше остальных (ширина одинаковая) */
+/* слайд) */
 .room {
   position: relative;
   width: 404px;
 }
 
-.room__img {
+.room-img {
   width: 100%;
   height: 486px;
   object-fit: cover;
 }
 
-.slider__slide.is-active .room__img {
+.slider-slide.is-active .room-img {
   height: 582px;
 }
 
-/* подпись видна только у большого слайда */
-.room__caption {
+/* только большой слайд */
+.room-caption {
   display: none;
   position: absolute;
   left: 24px;
@@ -60,28 +60,28 @@
   align-items: flex-end;
 }
 
-.slider__slide.is-active .room__caption {
+.slider-slide.is-active .room-caption {
   display: flex;
 }
 
-.room__box {
+.room-box {
   padding: 28px 32px;
   background: rgba(255, 255, 255, 0.72);
   backdrop-filter: blur(6px);
 }
 
-.room__box p {
+.room-box p {
   font-size: 15px;
   color: #666;
 }
 
-.room__box h3 {
+.room-box h3 {
   font-size: 28px;
   font-weight: 600;
   line-height: 1.2;
 }
 
-.room__arrow {
+.room-arrow {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -92,52 +92,51 @@
   color: #fff;
 }
 
-/* стрелка справа и точки под слайдером */
-.rooms__slider .slider__arrow--prev {
+/* стрелка справа */
+.rooms-slider .slider-arrow--prev {
   display: none;
 }
 
-.rooms__slider .slider__arrow--next {
+.rooms-slider .slider-arrow--next {
   top: 265px;
   right: 68px;
 }
 
-.rooms__slider .slider__dots {
+.rooms-slider .slider-dots {
   top: 520px;
   left: 428px;
 }
 
 @media (max-width: 1279px) {
-  .rooms__inner {
+  .rooms-inner {
     grid-template-columns: 300px 1fr;
     gap: 40px;
     padding-left: 40px;
   }
 
-  .rooms__title {
+  .rooms-title {
     font-size: 32px;
   }
 }
 
-/* планшет и телефон: текст над слайдером */
 @media (max-width: 1023px) {
   .rooms {
     padding: 48px 0;
   }
 
-  .rooms__inner {
+  .rooms-inner {
     grid-template-columns: 1fr;
     gap: 32px;
     padding: 0 20px;
   }
 
-  .rooms__slider .slider__dots {
+  .rooms-slider .slider-dots {
     position: static;
   }
 }
 
 @media (max-width: 639px) {
-  .rooms__title {
+  .rooms-title {
     font-size: 28px;
   }
 
@@ -145,16 +144,16 @@
     width: 280px;
   }
 
-  .room__img,
-  .slider__slide.is-active .room__img {
+  .room-img,
+  .slider-slide.is-active .room-img {
     height: 380px;
   }
 
-  .room__box {
+  .room-box {
     padding: 16px 18px;
   }
 
-  .room__box h3 {
+  .room-box h3 {
     font-size: 20px;
   }
 }

@@ -27,18 +27,17 @@
   color: var(--grey);
 }
 
-.search__clear {
+.search-clear {
   border: 0;
   background: transparent;
   font-size: 14px;
   color: var(--grey);
 }
 
-.search__clear:hover {
+.search-clear:hover {
   color: var(--dark);
 }
 
-/* у type="search" в Chrome есть свой крестик, прячем его */
 .search input::-webkit-search-cancel-button {
   display: none;
 }

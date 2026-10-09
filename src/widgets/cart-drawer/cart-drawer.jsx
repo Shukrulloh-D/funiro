@@ -22,10 +22,10 @@ export function CartDrawer() {
 
   return (
     <div className={cart.open ? 'cart cart--open' : 'cart'}>
-      <div className="cart__overlay" onClick={() => cart.setOpen(false)} />
+      <div className="cart-overlay" onClick={() => cart.setOpen(false)} />
 
-      <aside className="cart__panel" aria-label="Shopping cart">
-        <div className="cart__head">
+      <aside className="cart-panel" aria-label="Shopping cart">
+        <div className="cart-head">
           <h2>Shopping Cart ({cart.count})</h2>
           <button aria-label="Close cart" onClick={() => cart.setOpen(false)}>
             ✕
@@ -33,16 +33,16 @@ export function CartDrawer() {
         </div>
 
         {cart.items.length === 0 ? (
-          <p className="cart__empty">Your cart is empty</p>
+          <p className="cart-empty">Your cart is empty</p>
         ) : (
-          <ul className="cart__list">
+          <ul className="cart-list">
             {cart.items.map((item) => (
-              <li className="cart__item" key={item.id}>
+              <li className="cart-item" key={item.id}>
                 <img src={item.image} alt={item.name} />
-                <div className="cart__info">
+                <div className="cart-info">
                   <h3>{item.name}</h3>
                   <p>{formatPrice(item.price)}</p>
-                  <div className="cart__qty">
+                  <div className="cart-qty">
                     <button aria-label="Less" onClick={() => cart.changeQty(item.id, -1)}>
                       −
                     </button>
@@ -53,7 +53,7 @@ export function CartDrawer() {
                   </div>
                 </div>
                 <button
-                  className="cart__remove"
+                  className="cart-remove"
                   aria-label="Remove"
                   onClick={() => cart.remove(item.id)}
                 >
@@ -64,11 +64,11 @@ export function CartDrawer() {
           </ul>
         )}
 
-        <div className="cart__foot">
+        <div className="cart-foot">
           <p>
             Subtotal <strong>{formatPrice(cart.total)}</strong>
           </p>
-          <div className="cart__buttons">
+          <div className="cart-buttons">
             <Button color="outline" size="sm" onClick={cart.clear} disabled={!cart.count}>
               Clear
             </Button>

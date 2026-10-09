@@ -4,10 +4,10 @@ import './tip-card.css'
 export function TipCard({ item }) {
   return (
     <article className="tip-card">
-      <img className="tip-card__img" src={item.image} alt="" />
-      <div className="tip-card__body">
-        <h3 className="tip-card__title">{item.title}</h3>
-        <p className="tip-card__date">{item.date}</p>
+      <img className="tip-card-img" src={item.image} alt="" />
+      <div className="tip-card-body">
+        <h3 className="tip-card-title">{item.title}</h3>
+        <p className="tip-card-date">{item.date}</p>
       </div>
     </article>
   )
