@@ -40,8 +40,8 @@
 /* Слайдер */
 .hero-slider {
   position: absolute;
-  top: 121px;
-  left: 406px;
+  top: 80px;
+  left: 300px;
   right: 0;
 }
 
@@ -97,19 +97,19 @@
 
 /* Стрелки и точки */
 .hero-slider .slider-arrow {
-  top: -80px;
-  width: 48px;
+  top: -56px; 
+  width: 47px;
   height: 48px;
 }
 
 .hero-slider .slider-arrow--prev {
-  right: 142px;
+  right: 242px; /* Было 142px — увеличили, чтобы кнопка ушла левее */
   background: #fce8db;
   box-shadow: none;
 }
 
 .hero-slider .slider-arrow--next {
-  right: 94px;
+  right: 194px; /* Было 94px — увеличили пропорционально */
   background: var(--orange);
   box-shadow: none;
   color: #fff;
